@@ -11,6 +11,7 @@
 		AECFA52824811845004FA77C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECFA52724811845004FA77C /* ViewController.swift */; };
 		AECFA52A24811847004FA77C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AECFA52924811847004FA77C /* Assets.xcassets */; };
 		AECFA52D24811847004FA77C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECFA52B24811847004FA77C /* Main.storyboard */; };
+		AECFA53624811883004FA77C /* InputSourceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECFA53524811883004FA77C /* InputSourceDetector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		AECFA52C24811847004FA77C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AECFA52E24811847004FA77C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AECFA52F24811847004FA77C /* IS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IS.entitlements; sourceTree = "<group>"; };
+		AECFA53524811883004FA77C /* InputSourceDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSourceDetector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				AECFA52524811845004FA77C /* AppDelegate.swift */,
 				AECFA52724811845004FA77C /* ViewController.swift */,
+				AECFA53524811883004FA77C /* InputSourceDetector.swift */,
 				AECFA52924811847004FA77C /* Assets.xcassets */,
 				AECFA52B24811847004FA77C /* Main.storyboard */,
 				AECFA52E24811847004FA77C /* Info.plist */,
@@ -134,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AECFA52824811845004FA77C /* ViewController.swift in Sources */,
+				AECFA53624811883004FA77C /* InputSourceDetector.swift in Sources */,
 				AECFA52624811845004FA77C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

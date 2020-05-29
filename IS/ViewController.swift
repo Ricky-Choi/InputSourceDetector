@@ -7,21 +7,25 @@
 //
 
 import Cocoa
+import Carbon
 
 class ViewController: NSViewController {
+    
+    let isDetector = InputSourceDetector()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
+        
+        isDetector.observeChangeInputSource { (source) in
+            print("DETECTED", source)
         }
     }
 
-
+    @IBAction func reload(_ sender: Any) {
+        print(isDetector.currentInputSource)
+    }
+    
+    
+    
 }
 
