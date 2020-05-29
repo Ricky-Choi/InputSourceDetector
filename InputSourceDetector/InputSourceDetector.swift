@@ -10,6 +10,8 @@ import Foundation
 import Carbon
 
 public class InputSourceDetector {
+    public init() {}
+    
     public var currentInputSource: TISInputSource {
         TISCopyCurrentKeyboardInputSource().takeRetainedValue()
     }
@@ -18,10 +20,8 @@ public class InputSourceDetector {
     
     public func observeChangeInputSource(handler: @escaping (TISInputSource) -> Void) {
         inputSourceObserveHandler = handler
-        
-        let inputSourceChangedName = kTISNotifySelectedKeyboardInputSourceChanged as String
 
-        DistributedNotificationCenter.default().addObserver(self, selector: #selector(reloadAuto(_:)), name: inputSourceChangedName.notificationName, object: nil)
+        DistributedNotificationCenter.default().addObserver(self, selector: #selector(reloadAuto(_:)), name: kTISNotifySelectedKeyboardInputSourceChanged.notificationName, object: nil)
     }
     
     @objc func reloadAuto(_ notification: Notification) {
@@ -32,5 +32,11 @@ public class InputSourceDetector {
 public extension String {
     var notificationName: NSNotification.Name {
         NSNotification.Name.init(self)
+    }
+}
+
+public extension CFString {
+    var notificationName: NSNotification.Name {
+        (self as String).notificationName
     }
 }

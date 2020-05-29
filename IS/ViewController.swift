@@ -8,6 +8,7 @@
 
 import Cocoa
 import Carbon
+import InputSourceDetector
 
 class ViewController: NSViewController {
     
